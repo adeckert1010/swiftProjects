@@ -37,11 +37,15 @@ todo.insert("Watch TV", at: 2)
 //Removing Items From Arrays
 todo.remove(at: 2)
 
+//Dealing With Non Existent Data
+
 todo.count
 //todo[5] CRASH! Do not use index value equal to count value
 
 
 var arrayOfInts: [Int]
+
+
 
 //Dictionaries
 
@@ -55,18 +59,32 @@ var arrayOfInts: [Int]
         DXB                     Dubai International
  */
 
-let airportCodes: [String: String] = ["LGA": "La Guardia", "LHR": "Heathrow", "CDG": "Charles de Gaulle", "HKG": "Hong Kong International", "DXB": "Dubai International"]
+var airportCodes: [String: String] = ["LGA": "La Guardia", "LHR": "Heathrow", "CDG": "Charles de Gaulle", "HKG": "Hong Kong International", "DXB": "Dubai International"]
 
+let currentWeather = ["temperature": 75.0]
 
+//Reading From a Dictionary
 
+airportCodes["LGA"]
+airportCodes["HKG"]
 
+//Inserting Key Value Pairs
 
+airportCodes["SYD"] = "Sydney Airport"
 
+airportCodes["LGA"] = "La Guardia International Airport"
+airportCodes
 
+airportCodes.updateValue("Dublin Airport", forKey: "DUB")
 
+//Removing Key Value Pairs
 
+airportCodes["DXB"] = nil
+airportCodes.removeValue(forKey: "CDG")
 
-
+//Dealing With Non Existent Data
+let newYorkAirport = airportCodes["LGA"]
+let orlandoAirport = airportCodes["MCO"]
 
 
 
